@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /404
+
+Sitemap: https://netyapiinsaat.com.tr/sitemap.xml
