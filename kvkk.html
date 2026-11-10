@@ -472,8 +472,8 @@ nav.links a[aria-current="page"]{color:#14161F;box-shadow:0 2px 0 var(--gold)}
 <h2>6. Saklama Süresi</h2>
 <p>Kişisel verileriniz, işlenme amacının gerektirdiği süre ve ilgili mevzuatta öngörülen süreler boyunca saklanır. Bu sürelerin sona ermesiyle birlikte silinir, yok edilir veya anonim hale getirilir.</p>
 
-<h2>7. Çerezler</h2>
-<p>İnternet sitemiz reklam veya kullanıcı takibi amacıyla çerez kullanmamaktadır. Sitenin görüntülenmesi için kullanılan yazı tipi ve barındırma hizmetleri, teknik olarak IP adresinizi işleyebilir.</p>
+<h2>7. Çerezler ve Ziyaret İstatistikleri</h2>
+<p>İnternet sitemiz reklam veya kullanıcı takibi amacıyla çerez kullanmamaktadır. Ziyaret sayısı, görüntülenen sayfalar ve iletişim butonlarına tıklanma sayısı gibi genel istatistikler, çerez kullanmayan ve ziyaretçileri tek tek tanımlamayan Cloudflare Web Analytics hizmetiyle toplu olarak ölçülür. Sitenin görüntülenmesi için kullanılan yazı tipi, barındırma ve istatistik hizmetleri teknik olarak IP adresinizi işleyebilir.</p>
 
 <h2>8. KVKK Kapsamındaki Haklarınız</h2>
 <p>KVKK'nın 11. maddesi uyarınca veri sorumlusuna başvurarak:</p>
@@ -523,5 +523,9 @@ nav.links a[aria-current="page"]{color:#14161F;box-shadow:0 2px 0 var(--gold)}
 
 
 
+<script>(function(){function ev(n){try{var f=document.createElement('iframe');f.src='/olay/'+n+'.html';f.title='olay';f.setAttribute('aria-hidden','true');f.tabIndex=-1;f.style.cssText='position:absolute;width:1px;height:1px;border:0;left:-10px;top:-10px;visibility:hidden';document.body.appendChild(f);}catch(e){}}
+window.nyEvent=ev;document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';
+if(h.indexOf('wa.me')>-1)ev('whatsapp');else if(h.indexOf('tel:')===0)ev('telefon');else if(h.indexOf('mailto:')===0)ev('e-posta');else if(h.indexOf('instagram.com')>-1)ev('instagram');},true);})();</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "2e54280359a4425b988cd0293fc74a37"}'></script>
 </body>
 </html>

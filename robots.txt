@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /404
+Disallow: /olay/
 
 Sitemap: https://netyapiinsaat.com.tr/sitemap.xml

@@ -564,5 +564,9 @@ var x0=null;d.addEventListener('touchstart',function(e){x0=e.touches[0].clientX}
 d.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)show(k+(dx<0?1:-1));x0=null;});})();
 </script>
 
+<script>(function(){function ev(n){try{var f=document.createElement('iframe');f.src='/olay/'+n+'.html';f.title='olay';f.setAttribute('aria-hidden','true');f.tabIndex=-1;f.style.cssText='position:absolute;width:1px;height:1px;border:0;left:-10px;top:-10px;visibility:hidden';document.body.appendChild(f);}catch(e){}}
+window.nyEvent=ev;document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';
+if(h.indexOf('wa.me')>-1)ev('whatsapp');else if(h.indexOf('tel:')===0)ev('telefon');else if(h.indexOf('mailto:')===0)ev('e-posta');else if(h.indexOf('instagram.com')>-1)ev('instagram');},true);})();</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "2e54280359a4425b988cd0293fc74a37"}'></script>
 </body>
 </html>
