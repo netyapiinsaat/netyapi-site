@@ -263,6 +263,11 @@ form.wa .sub{margin:-8px 0 4px;color:var(--muted);font-size:15px}
 .field textarea{min-height:100px;resize:vertical}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+fieldset.bina{border:1px solid var(--line);border-radius:2px;padding:14px 16px 16px;margin:0;display:grid;gap:14px;min-width:0}
+fieldset.bina legend{padding:0 6px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+fieldset.bina legend span{text-transform:none;letter-spacing:0;font-weight:500;color:var(--muted)}
+.kvkk a,.wa-kvkk a{color:var(--gold);text-decoration:underline;text-underline-offset:2px}
+.wa-kvkk{margin:0;font-size:13px;color:var(--muted);line-height:1.45}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .kvkk{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--muted);line-height:1.45;cursor:pointer}
 .kvkk input{margin-top:2px;accent-color:var(--gold);width:16px;height:16px;flex:none}
@@ -282,7 +287,8 @@ footer{border-top:1px solid #E1E4E9;background:#F4F5F7}
 .flinks a:hover,.fcontact a:hover{color:#9A7634}
 .fcontact{display:grid;gap:10px;align-content:start;font-size:15px}
 .fcontact span{color:#5A6271}
-.fbottom{border-top:1px solid #DCDFE4;padding-block:20px;color:#5A6271;font-size:13.5px}
+.fbottom{border-top:1px solid #DCDFE4;padding-block:20px;color:#5A6271;font-size:13.5px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.fbottom a{color:#5A6271;text-decoration:none}.fbottom a:hover{color:#14161F;text-decoration:underline}
 @media (max-width:760px){.fgrid{grid-template-columns:1fr;gap:28px}}
 nav.links a[aria-current="page"]{color:#14161F;box-shadow:0 2px 0 var(--gold)}
 .more-dark{color:#9A7634;margin-top:20px}
@@ -320,6 +326,7 @@ nav.links a[aria-current="page"]{color:#14161F;box-shadow:0 2px 0 var(--gold)}
 .faq summary::after{content:"+";position:absolute;right:4px;top:16px;font-family:var(--display);font-size:24px;color:#9A7634}
 .faq[open] summary::after{content:"–"}
 .faq p{margin:0 0 20px;color:var(--ink-muted);max-width:64ch}
+.faq-link{display:inline-block;margin-top:6px;color:#9A7634;font-weight:600;text-decoration:none}.faq-link:hover{text-decoration:underline}
 /* Blog yazısı */
 .prose{max-width:740px;margin:0 auto;font-size:18px;line-height:1.75;color:var(--ink-text)}
 .cover{margin:0 0 32px;aspect-ratio:16/10;max-width:100%;overflow:hidden;background:#12161E}
@@ -522,7 +529,7 @@ nav.links a[aria-current="page"]{color:#14161F;box-shadow:0 2px 0 var(--gold)}
       <a href="https://www.instagram.com/netyapi.insaat/" target="_blank" rel="noopener">Instagram · @netyapi.insaat</a>
     </div>
   </div>
-  <div class="wrap fbottom"><span>© 2026 Net Yapı İnşa ve Mühendislik</span></div>
+  <div class="wrap fbottom"><span>© 2026 Net Yapı İnşa ve Mühendislik</span><a href="/kvkk">KVKK Aydınlatma Metni</a></div>
 </footer>
 
 <a class="wa-float" href="https://wa.me/905336898370" target="_blank" rel="noopener" aria-label="WhatsApp ile yazın">
