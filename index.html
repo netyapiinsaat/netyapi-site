@@ -105,8 +105,8 @@ header.top.open .menu-btn span:nth-child(3){transform:translateY(-7px) rotate(-4
 
 /* Hero: tam genişlik fotoğraf + koyu geçiş */
 .hero{position:relative;overflow:hidden;background:#080C14}
-.hero-img{position:absolute;top:0;right:0;height:100%;width:min(58%,860px);max-width:none;object-fit:cover;object-position:center}
-.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,#080C14 0%,#080C14 38%,rgba(8,12,20,.55) 52%,rgba(8,12,20,0) 70%),linear-gradient(0deg,rgba(8,12,20,.9) 0%,transparent 30%)}
+.hero-img{position:absolute;top:0;right:0;height:100%;width:min(62%,980px);max-width:none;object-fit:cover;object-position:center;-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.35) 22%,rgba(0,0,0,.8) 42%,#000 60%);mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.35) 22%,rgba(0,0,0,.8) 42%,#000 60%)}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,#080C14 0%,#080C14 30%,rgba(8,12,20,.6) 48%,rgba(8,12,20,.15) 66%,rgba(8,12,20,0) 80%),linear-gradient(0deg,rgba(8,12,20,.9) 0%,transparent 30%)}
 .hero .wrap{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:clamp(540px,62vw,760px);padding-block:120px 44px;gap:56px}
 .hero-copy{max-width:720px}
 .hero h1{font-weight:800;font-size:clamp(40px,6vw,76px);letter-spacing:-.025em;margin-top:0}
@@ -118,7 +118,7 @@ header.top.open .menu-btn span:nth-child(3){transform:translateY(-7px) rotate(-4
 .hero-cap{display:flex;flex-direction:column;gap:2px;border-left:2px solid var(--gold);padding-left:14px;font-size:14px}
 .hero-cap span{font-family:var(--display);font-weight:700;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
 .hero-cap b{font-weight:600}
-@media (max-width:860px){.hero .wrap{padding-block:96px 32px;min-height:640px}.hero-img{width:100%;object-position:center top}.hero-shade{background:linear-gradient(0deg,#080C14 18%,rgba(8,12,20,.7) 60%,rgba(8,12,20,.25) 100%)}}
+@media (max-width:860px){.hero .wrap{padding-block:96px 32px;min-height:640px}.hero-img{width:100%;object-position:center top;-webkit-mask-image:none;mask-image:none}.hero-shade{background:linear-gradient(0deg,#080C14 18%,rgba(8,12,20,.7) 60%,rgba(8,12,20,.25) 100%)}}
 
 /* Trust strip */
 .facts{border-block:1px solid var(--line);background:var(--ink-2)}
