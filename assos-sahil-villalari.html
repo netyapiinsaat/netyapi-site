@@ -347,9 +347,23 @@ nav.links a[aria-current="page"]{color:#14161F;box-shadow:0 2px 0 var(--gold)}
 .related{max-width:1080px;margin:72px auto 0;padding-top:40px;border-top:1px solid #C9CDD4}.related h2{font-weight:800;font-size:clamp(24px,2.6vw,30px);margin:0 0 24px}
 .disclaimer{margin-top:40px!important;padding-top:20px;border-top:1px solid #C9CDD4;font-size:14px!important;color:var(--ink-muted)!important;line-height:1.6}
 /* Proje detay */
+.pj-jump{display:inline-flex;gap:8px;align-items:center;margin-top:22px;color:#C9A55C;font-weight:600;font-size:15px;text-decoration:none;border-bottom:1px solid rgba(201,165,92,.5);padding-bottom:3px}.pj-jump:hover{color:#E2C27F;border-color:#E2C27F}
 .pj-hero{background:var(--ink);line-height:0}
 .pj-cta{background:linear-gradient(90deg,rgba(8,12,20,.95) 0%,rgba(8,12,20,.85) 45%,rgba(8,12,20,.6) 100%),url(images/projeler/assos/render-dis-3.jpg) center 45%/cover no-repeat var(--ink-2)}
-.pj-hero-img{width:100%;height:clamp(300px,52vw,640px);object-fit:cover;display:block}
+.pj-mosaic{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:6px;height:clamp(320px,33vw,500px);padding:6px;background:var(--ink)}
+.pj-m{position:relative;display:block;overflow:hidden;background:#1A202B;line-height:0}
+.pj-m img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.pj-m:hover img{transform:scale(1.04)}
+.pj-m-main{grid-row:span 2}
+.pj-hero-img{width:100%;height:100%;object-fit:cover;display:block}
+.pj-badge{position:absolute;left:14px;bottom:14px;line-height:1.2;background:rgba(8,12,20,.72);color:#E7E9ED;font-size:12.5px;font-weight:600;letter-spacing:.04em;padding:6px 10px;border-radius:2px}
+.pj-m-more::after{content:"";position:absolute;inset:0;background:rgba(8,12,20,.62);transition:background .3s}
+.pj-m-more:hover::after{background:rgba(8,12,20,.5)}
+.pj-m-more span{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;line-height:1.25;color:#C8CDD6;font-size:14px;text-align:center;padding:10px}
+.pj-m-more b{color:#fff;font-family:var(--display);font-size:clamp(16px,1.5vw,20px);border-bottom:2px solid var(--gold);padding-bottom:4px}
+@media (max-width:760px){.pj-mosaic{grid-template-columns:repeat(4,1fr);grid-template-rows:auto auto;height:auto;gap:4px;padding:4px}
+.pj-m-main{grid-column:1/-1;grid-row:auto;aspect-ratio:16/10}.pj-m:not(.pj-m-main){aspect-ratio:1}
+.pj-m-more b{font-size:13px;border-bottom-width:1px;padding-bottom:2px}.pj-m-more span{font-size:0;gap:0}.pj-m-more span b{font-size:13px}}
 .pj-intro{display:grid;grid-template-columns:1.3fr .9fr;gap:56px;align-items:start}
 .pj-intro p{color:var(--ink-muted);font-size:17.5px;margin:16px 0 0;max-width:62ch}
 .pj-facts{background:#fff;border:1px solid #D9DCE1;padding:30px 28px}
@@ -428,7 +442,34 @@ nav.links a[aria-current="page"]{color:#14161F;box-shadow:0 2px 0 var(--gold)}
   </section>
 
   <section class="pj-hero">
-    <img fetchpriority="high" decoding="async" width="1600" height="900" class="pj-hero-img" src="/images/projeler/assos/render-dis-2.jpg" alt="Assos Sahil Villaları, taş cepheli villa, özel havuz ve veranda (tasarım görseli)">
+    <div class="pj-mosaic">
+      <a class="pj-m pj-m-main" href="/images/projeler/assos/render-dis-2.jpg" data-lb="vitrin"><img fetchpriority="high" decoding="async" width="1600" height="900" class="pj-hero-img" src="/images/projeler/assos/render-dis-2.jpg" alt="Assos Sahil Villaları, taş cepheli villa, özel havuz ve veranda (tasarım görseli)"><span class="pj-badge">Tasarım görseli</span></a>
+      <a class="pj-m pj-m-1" href="/images/projeler/assos/render-salon.jpg" data-lb="vitrin"><img loading="lazy" decoding="async" width="760" height="594" src="/images/projeler/assos/k/render-salon.jpg" alt="Assos Sahil Villaları, salon tasarımı (tasarım görseli)"></a><a class="pj-m pj-m-2" href="/images/projeler/assos/render-mutfak.jpg" data-lb="vitrin"><img loading="lazy" decoding="async" width="760" height="594" src="/images/projeler/assos/k/render-mutfak.jpg" alt="Assos Sahil Villaları, mutfak tasarımı (tasarım görseli)"></a><a class="pj-m pj-m-3" href="/images/projeler/assos/render-veranda.jpg" data-lb="vitrin"><img loading="lazy" decoding="async" width="760" height="428" src="/images/projeler/assos/k/render-veranda.jpg" alt="Assos Sahil Villaları, veranda ve havuz tasarımı (tasarım görseli)"></a>
+      <a class="pj-m pj-m-more" href="#galeri"><img loading="lazy" decoding="async" width="760" height="594" src="/images/projeler/assos/k/render-teras-1.jpg" alt=""><span><b>Tüm görseller</b>22 görsel ve tanıtım filmi</span></a>
+      <a hidden href="/images/projeler/assos/render-dis-1.jpg" data-lb="vitrin"><img width="760" height="559" src="/images/projeler/assos/k/render-dis-1.jpg" alt="Assos Sahil Villaları, villa dış cephe ve bahçe tasarımı (tasarım görseli)" loading="lazy"></a><a hidden href="/images/projeler/assos/render-yatak-2.jpg" data-lb="vitrin"><img width="760" height="594" src="/images/projeler/assos/k/render-yatak-2.jpg" alt="Assos Sahil Villaları, yatak odası tasarımı (tasarım görseli)" loading="lazy"></a><a hidden href="/images/projeler/assos/render-banyo-1.jpg" data-lb="vitrin"><img width="633" height="760" src="/images/projeler/assos/k/render-banyo-1.jpg" alt="Assos Sahil Villaları, banyo tasarımı (tasarım görseli)" loading="lazy"></a><a hidden href="/images/projeler/assos/render-teras-1.jpg" data-lb="vitrin"><img width="760" height="594" src="/images/projeler/assos/k/render-teras-1.jpg" alt="Assos Sahil Villaları, çatı terası tasarımı (tasarım görseli)" loading="lazy"></a><a hidden href="/images/projeler/assos/render-salon-2.jpg" data-lb="vitrin"><img width="760" height="594" src="/images/projeler/assos/k/render-salon-2.jpg" alt="Assos Sahil Villaları, salon ve yemek alanı tasarımı (tasarım görseli)" loading="lazy"></a>
+    </div>
+  </section>
+
+  <section class="block light" id="galeri" style="scroll-margin-top:72px">
+    <div class="wrap">
+      <div class="head"><div><div class="eyebrow">Tasarım</div><h2>İç Mekân ve Peyzaj Tasarımı</h2></div>
+        <p>Villaların iç mekân ve dış alan tasarım görselleri. Görseller tasarım amaçlıdır; mobilya ve dekorasyon teslim kapsamına dahil değildir.</p></div>
+      <div class="pj-video">
+        <video controls playsinline preload="none" poster="images/projeler/assos/k/render-dis-1.jpg">
+          <source src="/images/projeler/assos/assos-sahil-villalari-tanitim.mp4" type="video/mp4">
+        </video>
+        <p class="pj-cap">Assos Sahil Villaları tanıtım filmi</p>
+      </div>
+      <div class="pj-grid pj-grid-4"><a class="pj-ph" href="/images/projeler/assos/render-dis-1.jpg" data-lb="tasarim"><img loading="lazy" decoding="async" width="760" height="559" src="/images/projeler/assos/k/render-dis-1.jpg" alt="Assos Sahil Villaları, villa dış cephe ve bahçe tasarımı (tasarım görseli)"></a><a class="pj-ph" href="/images/projeler/assos/render-salon.jpg" data-lb="tasarim"><img loading="lazy" decoding="async" width="760" height="594" src="/images/projeler/assos/k/render-salon.jpg" alt="Assos Sahil Villaları, salon tasarımı (tasarım görseli)"></a><a class="pj-ph" href="/images/projeler/assos/render-mutfak.jpg" data-lb="tasarim"><img loading="lazy" decoding="async" width="760" height="594" src="/images/projeler/assos/k/render-mutfak.jpg" alt="Assos Sahil Villaları, mutfak tasarımı (tasarım görseli)"></a><a class="pj-ph" href="/images/projeler/assos/render-yatak-2.jpg" data-lb="tasarim"><img loading="lazy" decoding="async" width="760" height="594" src="/images/projeler/assos/k/render-yatak-2.jpg" alt="Assos Sahil Villaları, yatak odası tasarımı (tasarım görseli)"></a><a class="pj-ph" href="/images/projeler/assos/render-banyo-1.jpg" data-lb="tasarim"><img loading="lazy" decoding="async" width="633" height="760" src="/images/projeler/assos/k/render-banyo-1.jpg" alt="Assos Sahil Villaları, banyo tasarımı (tasarım görseli)"></a><a class="pj-ph" href="/images/projeler/assos/render-teras-1.jpg" data-lb="tasarim"><img loading="lazy" decoding="async" width="760" height="594" src="/images/projeler/assos/k/render-teras-1.jpg" alt="Assos Sahil Villaları, çatı terası tasarımı (tasarım görseli)"></a><a class="pj-ph" href="/images/projeler/assos/render-veranda.jpg" data-lb="tasarim"><img loading="lazy" decoding="async" width="760" height="428" src="/images/projeler/assos/k/render-veranda.jpg" alt="Assos Sahil Villaları, veranda ve havuz tasarımı (tasarım görseli)"></a><a class="pj-ph" href="/images/projeler/assos/render-salon-2.jpg" data-lb="tasarim"><img loading="lazy" decoding="async" width="760" height="594" src="/images/projeler/assos/k/render-salon-2.jpg" alt="Assos Sahil Villaları, salon ve yemek alanı tasarımı (tasarım görseli)"></a></div>
+    </div>
+  </section>
+
+  <section class="block dark">
+    <div class="wrap">
+      <div class="head"><div><div class="eyebrow">Fotoğraflar</div><h2>Tamamlanan Proje</h2></div>
+        <p>Teslim sonrası sahadan çekilen fotoğraflar. Büyütmek ve diğer fotoğraflara geçmek için görsele dokunun.</p></div>
+      <div class="pj-grid"><a class="pj-ph pj-wide" href="/images/projeler/assos/villalar-havuz.jpg" data-lb="proje"><img loading="lazy" decoding="async" width="760" height="428" src="/images/projeler/assos/k/villalar-havuz.jpg" alt="Assos Sahil Villaları, taş cepheli villalar ve özel havuz"></a><a class="pj-ph" href="/images/projeler/assos/villa-zeytin-havuz.jpg" data-lb="proje"><img loading="lazy" decoding="async" width="760" height="428" src="/images/projeler/assos/k/villa-zeytin-havuz.jpg" alt="Assos Sahil Villaları, asırlık zeytin ağacı, havuz ve villa"></a><a class="pj-ph" href="/images/projeler/assos/bahce-yolu.jpg" data-lb="proje"><img loading="lazy" decoding="async" width="760" height="428" src="/images/projeler/assos/k/bahce-yolu.jpg" alt="Assos Sahil Villaları, site içi bahçe ve yürüyüş yolu"></a><a class="pj-ph" href="/images/projeler/assos/dag-manzarasi.jpg" data-lb="proje"><img loading="lazy" decoding="async" width="760" height="428" src="/images/projeler/assos/k/dag-manzarasi.jpg" alt="Assos Sahil Villaları, dağ manzarası, villalar ve peyzaj"></a><a class="pj-ph" href="/images/projeler/assos/begonvil-cephe.jpg" data-lb="proje"><img loading="lazy" decoding="async" width="760" height="428" src="/images/projeler/assos/k/begonvil-cephe.jpg" alt="Assos Sahil Villaları, taş cephe, begonvil ve havuz"></a><a class="pj-ph" href="/images/projeler/assos/villa-havuz.jpg" data-lb="proje"><img loading="lazy" decoding="async" width="570" height="760" src="/images/projeler/assos/k/villa-havuz.jpg" alt="Assos Sahil Villaları, villa, özel havuz ve teras"></a><a class="pj-ph" href="/images/projeler/assos/ortak-bahce.jpg" data-lb="proje"><img loading="lazy" decoding="async" width="760" height="570" src="/images/projeler/assos/k/ortak-bahce.jpg" alt="Assos Sahil Villaları, zeytin ağaçlı ortak bahçe"></a><a class="pj-ph" href="/images/projeler/assos/villalar-genel.jpg" data-lb="proje"><img loading="lazy" decoding="async" width="570" height="760" src="/images/projeler/assos/k/villalar-genel.jpg" alt="Assos Sahil Villaları, zeytin ağaçları arasında villalar"></a><a class="pj-ph" href="/images/projeler/assos/site-ici-peyzaj.jpg" data-lb="proje"><img loading="lazy" decoding="async" width="570" height="760" src="/images/projeler/assos/k/site-ici-peyzaj.jpg" alt="Assos Sahil Villaları, site içi peyzaj ve aydınlatma"></a></div>
+    </div>
   </section>
 
   <section class="block light">
@@ -471,28 +512,6 @@ nav.links a[aria-current="page"]{color:#14161F;box-shadow:0 2px 0 var(--gold)}
         <div><h3>Zeytinlikler Arasında</h3><p>Asırlık zeytin ağaçlarıyla çevrili, sakin ve doğayla iç içe bir site yaşamı.</p></div>
         <div><h3>Elektrikli Araç Şarjı</h3><p>Her villaya ait elektrikli araç şarj istasyonu.</p></div>
       </div>
-    </div>
-  </section>
-
-  <section class="block light">
-    <div class="wrap">
-      <div class="head"><div><div class="eyebrow">Tasarım</div><h2>İç Mekân ve Peyzaj Tasarımı</h2></div>
-        <p>Villaların iç mekân ve dış alan tasarım görselleri. Görseller tasarım amaçlıdır; mobilya ve dekorasyon teslim kapsamına dahil değildir.</p></div>
-      <div class="pj-video">
-        <video controls playsinline preload="none" poster="images/projeler/assos/k/render-dis-1.jpg">
-          <source src="/images/projeler/assos/assos-sahil-villalari-tanitim.mp4" type="video/mp4">
-        </video>
-        <p class="pj-cap">Assos Sahil Villaları tanıtım filmi</p>
-      </div>
-      <div class="pj-grid pj-grid-4"><a class="pj-ph" href="/images/projeler/assos/render-dis-1.jpg" data-lb="tasarim"><img loading="lazy" decoding="async" width="760" height="559" src="/images/projeler/assos/k/render-dis-1.jpg" alt="Assos Sahil Villaları, villa dış cephe ve bahçe tasarımı (tasarım görseli)"></a><a class="pj-ph" href="/images/projeler/assos/render-salon.jpg" data-lb="tasarim"><img loading="lazy" decoding="async" width="760" height="594" src="/images/projeler/assos/k/render-salon.jpg" alt="Assos Sahil Villaları, salon tasarımı (tasarım görseli)"></a><a class="pj-ph" href="/images/projeler/assos/render-mutfak.jpg" data-lb="tasarim"><img loading="lazy" decoding="async" width="760" height="594" src="/images/projeler/assos/k/render-mutfak.jpg" alt="Assos Sahil Villaları, mutfak tasarımı (tasarım görseli)"></a><a class="pj-ph" href="/images/projeler/assos/render-yatak-2.jpg" data-lb="tasarim"><img loading="lazy" decoding="async" width="760" height="594" src="/images/projeler/assos/k/render-yatak-2.jpg" alt="Assos Sahil Villaları, yatak odası tasarımı (tasarım görseli)"></a><a class="pj-ph" href="/images/projeler/assos/render-banyo-1.jpg" data-lb="tasarim"><img loading="lazy" decoding="async" width="633" height="760" src="/images/projeler/assos/k/render-banyo-1.jpg" alt="Assos Sahil Villaları, banyo tasarımı (tasarım görseli)"></a><a class="pj-ph" href="/images/projeler/assos/render-teras-1.jpg" data-lb="tasarim"><img loading="lazy" decoding="async" width="760" height="594" src="/images/projeler/assos/k/render-teras-1.jpg" alt="Assos Sahil Villaları, çatı terası tasarımı (tasarım görseli)"></a><a class="pj-ph" href="/images/projeler/assos/render-veranda.jpg" data-lb="tasarim"><img loading="lazy" decoding="async" width="760" height="428" src="/images/projeler/assos/k/render-veranda.jpg" alt="Assos Sahil Villaları, veranda ve havuz tasarımı (tasarım görseli)"></a><a class="pj-ph" href="/images/projeler/assos/render-salon-2.jpg" data-lb="tasarim"><img loading="lazy" decoding="async" width="760" height="594" src="/images/projeler/assos/k/render-salon-2.jpg" alt="Assos Sahil Villaları, salon ve yemek alanı tasarımı (tasarım görseli)"></a></div>
-    </div>
-  </section>
-
-  <section class="block dark">
-    <div class="wrap">
-      <div class="head"><div><div class="eyebrow">Fotoğraflar</div><h2>Tamamlanan Proje</h2></div>
-        <p>Teslim sonrası sahadan çekilen fotoğraflar. Büyütmek ve diğer fotoğraflara geçmek için görsele dokunun.</p></div>
-      <div class="pj-grid"><a class="pj-ph pj-wide" href="/images/projeler/assos/villalar-havuz.jpg" data-lb="proje"><img loading="lazy" decoding="async" width="760" height="428" src="/images/projeler/assos/k/villalar-havuz.jpg" alt="Assos Sahil Villaları, taş cepheli villalar ve özel havuz"></a><a class="pj-ph" href="/images/projeler/assos/villa-zeytin-havuz.jpg" data-lb="proje"><img loading="lazy" decoding="async" width="760" height="428" src="/images/projeler/assos/k/villa-zeytin-havuz.jpg" alt="Assos Sahil Villaları, asırlık zeytin ağacı, havuz ve villa"></a><a class="pj-ph" href="/images/projeler/assos/bahce-yolu.jpg" data-lb="proje"><img loading="lazy" decoding="async" width="760" height="428" src="/images/projeler/assos/k/bahce-yolu.jpg" alt="Assos Sahil Villaları, site içi bahçe ve yürüyüş yolu"></a><a class="pj-ph" href="/images/projeler/assos/dag-manzarasi.jpg" data-lb="proje"><img loading="lazy" decoding="async" width="760" height="428" src="/images/projeler/assos/k/dag-manzarasi.jpg" alt="Assos Sahil Villaları, dağ manzarası, villalar ve peyzaj"></a><a class="pj-ph" href="/images/projeler/assos/begonvil-cephe.jpg" data-lb="proje"><img loading="lazy" decoding="async" width="760" height="428" src="/images/projeler/assos/k/begonvil-cephe.jpg" alt="Assos Sahil Villaları, taş cephe, begonvil ve havuz"></a><a class="pj-ph" href="/images/projeler/assos/villa-havuz.jpg" data-lb="proje"><img loading="lazy" decoding="async" width="570" height="760" src="/images/projeler/assos/k/villa-havuz.jpg" alt="Assos Sahil Villaları, villa, özel havuz ve teras"></a><a class="pj-ph" href="/images/projeler/assos/ortak-bahce.jpg" data-lb="proje"><img loading="lazy" decoding="async" width="760" height="570" src="/images/projeler/assos/k/ortak-bahce.jpg" alt="Assos Sahil Villaları, zeytin ağaçlı ortak bahçe"></a><a class="pj-ph" href="/images/projeler/assos/villalar-genel.jpg" data-lb="proje"><img loading="lazy" decoding="async" width="570" height="760" src="/images/projeler/assos/k/villalar-genel.jpg" alt="Assos Sahil Villaları, zeytin ağaçları arasında villalar"></a><a class="pj-ph" href="/images/projeler/assos/site-ici-peyzaj.jpg" data-lb="proje"><img loading="lazy" decoding="async" width="570" height="760" src="/images/projeler/assos/k/site-ici-peyzaj.jpg" alt="Assos Sahil Villaları, site içi peyzaj ve aydınlatma"></a></div>
     </div>
   </section>
 
